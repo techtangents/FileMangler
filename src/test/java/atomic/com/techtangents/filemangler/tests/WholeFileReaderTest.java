@@ -1,4 +1,4 @@
-package com.techtangents.filemangler;
+package com.techtangents.filemangler.tests;
 
 import com.techtangents.filemangler.api.DefaultFileMangler;
 import com.techtangents.filemangler.api.bits.DefaultWholeFileReader;

@@ -1,4 +1,4 @@
-package com.techtangents.filemangler;
+package com.techtangents.filemangler.tests;
 
 import com.techtangents.filemangler.api.DefaultFileMangler;
 import com.techtangents.filemangler.api.bits.DefaultWholeFileReader;
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class WholeFileWriterTest {
 
-    private static final String CONTENT = "blahblahblah\nblahblah\nhello\r\n";
+    private static final String CONTENT = "blahblahblah\nblahblah\nhello";
 
     private final WholeFileWriter wholeFileWriter = new DefaultWholeFileWriter();
     private final WholeFileWriter fileMangler = new DefaultFileMangler();
