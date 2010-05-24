@@ -7,7 +7,7 @@ import com.techtangents.filemangler.edge.java.io.BufferedReader;
 import com.techtangents.filemangler.edge.java.io.EdgeBufferedReader;
 import com.techtangents.filemangler.edge.java.io.Reader;
 
-public class DefaultReaderReader implements ReaderReader {
+public class DefaultWholeReaderReader implements WholeReaderReader {
 
     private final NewlineFixer newlineFixer = new DefaultNewlineFixer();
 
