@@ -11,7 +11,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-public class FileManglerTest {
+public class WholeFileReaderTest {
 
     private final WholeFileReader fileMangler = new DefaultFileMangler();
     private final WholeFileReader wholeFileReader = new DefaultWholeFileReader();
