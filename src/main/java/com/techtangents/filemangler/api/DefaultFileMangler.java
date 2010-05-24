@@ -22,15 +22,15 @@ public class DefaultFileMangler implements FileMangler {
         return wholeFileReader.read(f);
     }
 
-    public void write(File f, String content) {
-        wholeFileWriter.write(f, content);
-    }
-
     public String read(Class clazz, String filename) {
         return resourceReader.read(clazz, filename);
     }
 
     public String read(Reader reader) {
         return readerReader.read(reader);
+    }
+
+    public void write(File f, String content) {
+        wholeFileWriter.write(f, content);
     }
 }
