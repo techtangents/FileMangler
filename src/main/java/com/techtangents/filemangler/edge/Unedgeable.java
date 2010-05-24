@@ -1,4 +1,4 @@
-package com.techtangents.filemangler.edge.java.io;
+package com.techtangents.filemangler.edge;
 
 public interface Unedgeable<T> {
     T unedge();

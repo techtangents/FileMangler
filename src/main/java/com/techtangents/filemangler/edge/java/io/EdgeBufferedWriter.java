@@ -4,18 +4,18 @@ import com.techtangents.filemangler.edge.EdgeException;
 
 import java.io.IOException;
 
-public class EdgeBufferedReader implements BufferedReader {
-    private java.io.BufferedReader real;
+public class EdgeBufferedWriter implements BufferedWriter {
+    private java.io.BufferedWriter real;
 
-    public EdgeBufferedReader(Reader reader) {
-        this.real = new java.io.BufferedReader(reader.unedge());
+    public EdgeBufferedWriter(Writer w) {
+        this.real = new java.io.BufferedWriter(w.unedge());
     }
 
-    public int read(char[] buf) {
+    public void write(String str) {
         try {
-            return real.read(buf);
+            real.write(str);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new EdgeException(e);
         }
     }
 
@@ -27,7 +27,7 @@ public class EdgeBufferedReader implements BufferedReader {
         }
     }
 
-    public java.io.Reader unedge() {
+    public java.io.BufferedWriter unedge() {
         return real;
     }
 }

@@ -17,6 +17,7 @@ public class DefaultWholeFileReader implements WholeFileReader {
         while ((chars = r.read(buf)) != -1) {
             sb.append(buf, 0, chars);
         }
+        r.close();
         return sb.toString();
     }
 }
