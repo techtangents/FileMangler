@@ -1,4 +1,4 @@
-package com.techtangents.filemangler.edge;
+package com.techtangents.filemangler.edge.java.io;
 
 import com.techtangents.filemangler.exception.FileNotFoundRuntimeException;
 

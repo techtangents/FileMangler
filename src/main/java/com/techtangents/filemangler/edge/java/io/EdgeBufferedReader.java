@@ -1,8 +1,8 @@
-package com.techtangents.filemangler.edge;
+package com.techtangents.filemangler.edge.java.io;
 
 import java.io.*;
 
-public class EdgeBufferedReader implements BufferedReader {
+public class EdgeBufferedReader implements com.techtangents.filemangler.edge.java.io.BufferedReader {
     private java.io.BufferedReader real;
 
     public EdgeBufferedReader(Reader reader) {

@@ -1,9 +1,9 @@
 package com.techtangents.filemangler.api.bits;
 
 import com.techtangents.filemangler.api.bits.WholeFileReader;
-import com.techtangents.filemangler.edge.BufferedReader;
-import com.techtangents.filemangler.edge.EdgeBufferedReader;
-import com.techtangents.filemangler.edge.EdgeFileReader;
+import com.techtangents.filemangler.edge.java.io.BufferedReader;
+import com.techtangents.filemangler.edge.java.io.EdgeBufferedReader;
+import com.techtangents.filemangler.edge.java.io.EdgeFileReader;
 
 import java.io.File;
 
