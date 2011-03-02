@@ -1,15 +1,6 @@
 package com.techtangents.filemangler.api;
 
-import com.techtangents.filemangler.api.bits.DefaultWholeFileReader;
-import com.techtangents.filemangler.api.bits.DefaultWholeFileWriter;
-import com.techtangents.filemangler.api.bits.DefaultWholeReaderReader;
-import com.techtangents.filemangler.api.bits.DefaultWholeResourceReader;
-import com.techtangents.filemangler.api.bits.DefaultWholeStreamReader;
-import com.techtangents.filemangler.api.bits.WholeFileReader;
-import com.techtangents.filemangler.api.bits.WholeFileWriter;
-import com.techtangents.filemangler.api.bits.WholeReaderReader;
-import com.techtangents.filemangler.api.bits.WholeResourceReader;
-import com.techtangents.filemangler.api.bits.WholeStreamReader;
+import com.techtangents.filemangler.api.bits.*;
 
 import java.io.File;
 import java.io.InputStream;
@@ -21,6 +12,20 @@ public class DefaultFileMangler implements FileMangler {
     private final WholeResourceReader resourceReader = new DefaultWholeResourceReader();
     private final WholeReaderReader readerReader = new DefaultWholeReaderReader();
     private final WholeStreamReader wholeStreamReader = new DefaultWholeStreamReader();
+
+    public File copyToTempFile(Class<?> clazz, String name) {
+        return tempFiler.copyToTempFile(clazz, name);
+    }
+
+    public File createTempFile() {
+        return tempFiler.createTempFile();
+    }
+
+    public File createTempFolder() {
+        return tempFiler.createTempFolder();
+    }
+
+    private final TempFiler tempFiler = new DefaultTempFiler();
 
     public String read(File f) {
         return wholeFileReader.read(f);

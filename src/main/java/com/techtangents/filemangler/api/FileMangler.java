@@ -1,10 +1,6 @@
 package com.techtangents.filemangler.api;
 
-import com.techtangents.filemangler.api.bits.WholeFileReader;
-import com.techtangents.filemangler.api.bits.WholeFileWriter;
-import com.techtangents.filemangler.api.bits.WholeReaderReader;
-import com.techtangents.filemangler.api.bits.WholeResourceReader;
-import com.techtangents.filemangler.api.bits.WholeStreamReader;
+import com.techtangents.filemangler.api.bits.*;
 
 public interface FileMangler
     extends
@@ -12,5 +8,6 @@ public interface FileMangler
         WholeFileWriter,
         WholeResourceReader,
         WholeReaderReader,
-        WholeStreamReader {
-}
+        WholeStreamReader,
+        TempFiler
+{}
