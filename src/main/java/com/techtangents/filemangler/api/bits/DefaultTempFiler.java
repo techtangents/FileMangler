@@ -19,7 +19,7 @@ public class DefaultTempFiler implements TempFiler {
     }
 
     public File createTempFile() {
-        return file.createTempFile("", "");
+        return file.createTempFile("tmp", "tmp");
     }
 
     public File createTempFolder() {
